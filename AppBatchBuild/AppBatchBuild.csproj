@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="android\**" />
+    <EmbeddedResource Remove="android\**" />
+    <None Remove="android\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="agents.txt" />
+    <None Remove="build.gradle" />
+    <None Remove="Constants.kt" />
+  </ItemGroup>
+
+</Project>
