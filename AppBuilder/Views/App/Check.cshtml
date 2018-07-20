@@ -1,0 +1,20 @@
+﻿@model AppBuilder.BuildStateViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>打包任务状态</title>
+</head>
+<body>
+<div>
+    <div>总任务数：@Model.Total</div>
+    <div>已完成：@Model.Finished</div>
+    <div>进行中：@Model.Working</div>
+    <div>待处理：@Model.New</div>
+    @foreach (var item in Model.WorkingItems) {
+        <div>@item.AgentName - @item.Host - @item.UpdateAt </div>
+    }
+</div>
+</body>
+</html>
